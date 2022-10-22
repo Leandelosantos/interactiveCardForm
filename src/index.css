@@ -1,0 +1,124 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap');
+
+* {
+  	padding: 0;
+  	margin: 0;
+  	box-sizing: border-box;
+	font-family: 'Space Grotesk', sans-serif;
+}
+
+
+
+
+.container {
+	height: 100vh;
+  	background-image: url(./images/bg-main-desktop.png);
+	background-repeat: repeat-y;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas: 
+		"cardFront form"
+		"cardBack form";
+	justify-items: center;
+	align-items: center;
+	
+}
+
+form {
+	width: 55%;
+	display: flex;
+	flex-flow: column nowrap;
+	grid-area: form;
+	margin: 0 10% 6% 0;
+	gap: 9px;
+}
+
+label {
+	font-size: 10px;
+	letter-spacing: 2px;
+	margin-bottom: 0.3%;
+}
+
+input {
+	width: auto;
+	padding: 3.5%;
+	border: 1px solid hsl(270, 3%, 87%);
+	border-radius: 5px;
+	display: flex;
+	margin-bottom: 6%;
+}
+
+input::placeholder {
+	color: hsl(270, 3%, 87%);
+	font-size: 18px;
+	font-weight: 400;
+}
+
+
+.container-date-cvc {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 8%;
+}
+
+.container-date-cvc label {
+	width: 50%;
+	margin-bottom: 2%;
+}
+
+.expDate {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+	width: 50%;
+	gap: 10%;
+}
+
+.expDate input {
+	width: 40%;
+	margin-top: 1%;
+	padding: 6%;
+}
+
+.cvc {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+	width: 50%;
+}
+
+.cvc input {
+	width: 100%;
+	margin-top: 1%;
+	padding: 6%;
+}
+
+.btnConfirm {
+	color: hsl(270, 3%, 87%);
+	background-color: hsl(278, 68%, 11%);
+	padding: 3%;
+	border: 1px solid hsl(278, 68%, 11%);
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.cardFront {
+	grid-area: cardFront;
+	margin: 12% 0 0 8%;
+}
+
+.cardBack {
+	grid-area: cardBack;
+	margin: 0 0 20% 34%;
+}
+
+p {
+	width: 800px;
+	height: 600px;
+	color: aqua;
+}
